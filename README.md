@@ -8,4 +8,4 @@ $ flask run
 
 # CoronaAI
 
-If you want to see this site working, you might want to see [Here](143.107.180.82:5000)
+If you want to see this site working, you might want to see (Here)[143.107.180.82:5000]
