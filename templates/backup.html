@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <meta name="description" content="">
+    <meta name="author" content="Stefan Taiguara Couperus Leal">
+
+    <title>Corona X-Ray AI</title>
+
+    <!-- Bootstrap core CSS -->
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+
+    <link rel="stylesheet" href="">
+
+
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Corona X-Ray AI</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Custom fonts for this template -->
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='clean-blog.css') }}" rel="stylesheet">
+
+</head>
+
+
+<style>
+    body {
+        color: black;
+    }
+    
+    .topright {
+        top: 1px;
+        right: 1px;
+        font-size: 18px;
+    }
+    
+    .topleft {
+        top: 1px;
+        left: 1px;
+        font-size: 18px;
+    }
+    
+    #white-text {
+        color: white;
+    }
+</style>
+
+<body>
+
+    <header class="masthead " style="background-image: url({{ url_for( 'static', filename='xray.png' ) }}) ">
+        <div class="container ">
+
+            <div class="row ">
+
+                <div class="col-6 topleft">
+                    <img src="{{url_for('static', filename='usp.jpg')}}" height="50" alt="">
+                </div>
+
+                <div class="col-6 topright">
+                    <img src="{{url_for('static', filename='ifsc.jpg')}}" width="50" lt="">
+                </div>
+
+                <div class="site-heading ">
+                    <h1>Covid19 X-Ray AI</h1>
+                    <span class="subheading ">This site use AI to identify covid19 in X-Ray images</span>
+
+                </div>
+                <div class="col-12">
+                    <center>
+                        <html>
+
+                        <form action="/upload" method="post" enctype="multipart/form-data">
+                            <span class="btn btn-default btn-file">
+                                  Put your X-Ray Image here <input type="file" name="image">
+                                </span>
+
+                            <input type="submit" value="Upload your image" class="btn btn-primary">
+                        </form>
+
+                        </html>
+                    </center>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="container ">
+            <div class="row ">
+                <div class="col-6 ">
+                    <p id="modification "> Bear in mind that you should not use this as a definity prove, It's always better to have more reliable source of data to make this kind of decision, you may only use this as last resort</p>
+                </div>
+                <div class="col-6 ">
+                    <p id="modification "> This site aims to diagnose covid19 cases by analysing the X-Ray images, the image that you upload in this site go to our database to continue to improve the AI</p>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+
+</html>

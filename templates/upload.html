@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Corona X-Ray AI</title>
+
+</head>
+
+<style>
+    h1,
+    p {
+        color: black;
+        font-size: medium;
+    }
+    
+    body {
+        color: gray;
+    }
+    
+    #warning {
+        color: red;
+    }
+    
+    .jumbotron {
+        margin-top: 15px;
+        color: gray;
+    }
+    
+    #row1 {
+        margin-top: 15px;
+    }
+</style>
+
+
+<body>
+
+    <div class="container-fluid bg-dark" style="background-image: url('/static/xray.png')">
+        <nav class="navbar navbar-expand-lg navbar-dark static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="{{url_for('static', filename='usp.jpg')}}" height="50" alt="">
+                </a>
+                <a class="navbar-brand" href="#">
+                    <img src="{{url_for('static', filename='ifsc.jpg')}}" height="75" alt="">
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid bg-dark">
+        <div class="row">
+            <div class="container"><br>
+                <div class="jumbotron">
+                    <center>
+                        {% if result == "0.00": %}
+                        <h1>It's not an X-Ray Image</h1>
+                        {% else %}
+                        <p>There is a {{result}}% that the pacient have covid19</p>
+                        {% endif %}
+                    </center>
+                </div>
+                <center>
+                    <img src="{{image}}" width=200 lt="If you are seeing this there are something wrong with the website, try reloading">
+                </center>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="row" id="row1'">
+            <div class="col-6">
+                <p> This site aims to diagnose covid19 cases by analysing the X-Ray images, the image that you upload in this site go to our database to continue to improve the AI</p>
+            </div>
+            <div class="col-6">
+                <p> Bear in mind that you should not use this as a definity prove, It's always better to have more reliable source of data to make this kind of decision, you may only use this as last resource</p>
+            </div>
+
+        </div>
+
+
+
+        <br>
+        <br>
+    </div>
+
+
+</body>
+
+</html>
+
+</html>

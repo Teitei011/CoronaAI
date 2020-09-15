@@ -1,0 +1,10 @@
+#background {
+    background: url("{{ url_for('static', filename='usp.jpg') }}") no-repeat center center fixed;
+    /* For WebKit*/
+    -moz-background-size: cover;
+    /* Mozilla*/
+    -o-background-size: cover;
+    /* Opera*/
+    background-size: cover;
+    /* Generic*/
+}
